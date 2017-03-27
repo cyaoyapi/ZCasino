@@ -61,9 +61,12 @@ else:
 				
 			finally:
 
-				quitter = raw_input("Voulez-vous continuer ? Tapez 'o' pour 'oui' et tout autre touche pour 'non'\n")
+				if avoir == 0:
+					break
+				else
+					quitter = raw_input("Voulez-vous continuer ? Tapez 'o' pour 'oui' et tout autre touche pour 'non'\n")
 			
 		
-
+print("Fin du programme! Au revoir.\n")
 
 
