@@ -1,8 +1,8 @@
 #!/usr/bin/python
 #-*- coding:utf-8 -*-
 
-import random
-import math
+from random import randrange
+from math import ceil
 
 print "Bienvenu à notre JEU ZCasino\n"
 
@@ -36,7 +36,7 @@ else:
 				else:
 					couleur_choix = "Rouge"
 
-				tirage = random.randrange(50)
+				tirage = randrange(50)
 
 				if tirage%2 == 0:
 					couleur_tirage = "Noir"
@@ -49,10 +49,10 @@ else:
 				print "Le numéro tiré est {}. Il a la couleur {}".format(tirage,couleur_tirage)
 				
 				if choix == tirage:
-					avoir += math.ceil(mise*3)
+					avoir += ceil(mise*3)
 					print "Bravo ! Bon numéro.\nVous gagnez 3 fois votre mise : {} Francs.\nVotre avoir est maintenant de {} Francs".format(mise*3,avoir)
 				elif couleur_choix == couleur_tirage:
-					avoir += math.ceil(mise*0.5)
+					avoir += ceil(mise*0.5)
 					print "Bravo! Bonne couleur.\nVous gagnez 50 pourcent de votre mise : {} Francs.\nVotre avoir est maintenant de {} Francs".format(mise*0.5,avoir)
 				
 				else:
@@ -63,10 +63,11 @@ else:
 
 				if avoir == 0:
 					break
-				else
+				else:
 					quitter = raw_input("Voulez-vous continuer ? Tapez 'o' pour 'oui' et tout autre touche pour 'non'\n")
 			
 		
 print("Fin du programme! Au revoir.\n")
+
 
 
